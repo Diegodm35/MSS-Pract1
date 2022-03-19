@@ -1,6 +1,8 @@
 package estructuras;
 
 import java.util.Scanner;
+import java.io.FileWriter;
+import java.io.IOException;  
 
 public class Vector_ {
 	double[] doubleArray;
@@ -32,6 +34,14 @@ public class Vector_ {
 		for(int i=0;i<size;i++) System.out.print(doubleArray[i] + " ");
 		System.out.println();
 	}
+	// Pasa al string el vector
+	public String to_s() {
+		String output = "";
+		for(int i=0;i<size;i++) {
+			output += doubleArray[i] + ",";
+		}
+		return output;
+	}
 	// Producto escalar
 	public double productoEscalar(Vector_ v2) {
 		double output = 0;
@@ -43,5 +53,15 @@ public class Vector_ {
 			return 0.0;
 		}
 		return output;
+	}
+	// Escribir en fichero
+	public void file_write(String name) {
+		 try {
+			FileWriter fw=new FileWriter(name);
+			fw.write(this.to_s());    
+			fw.close(); 
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 	}
 }

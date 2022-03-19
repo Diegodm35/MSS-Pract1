@@ -14,7 +14,8 @@ public class Ejercicio1 {
 		//Ejercicio1.apartado1();
 		//Ejercicio1.apartado2();
 		//Ejercicio1.apartado3();
-		Ejercicio1.apartado4();
+		//Ejercicio1.apartado4();
+		Ejercicio1.apartado5();
 	}
 	public static void apartado1() {
 		System.out.println("Primos:");
@@ -61,6 +62,14 @@ public class Ejercicio1 {
 		System.out.print("Producto Escalar: ");
 		double prod_esc = v1.productoEscalar(v2);
 		System.out.println(prod_esc);
-		
+		v1.file_write("test.txt");
+	}
+	public static void apartado5() {
+		System.out.println("Introduce tamaño de v3:");
+		int n1 = sc.nextInt();
+		Vector_ v3 = new Vector_(n1);
+		System.out.println("Introduce nombre del fichero:");
+		String name = sc.next();
+		v3.file_write(name);
 	}
 }
