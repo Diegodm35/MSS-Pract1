@@ -90,7 +90,6 @@ public class Matrix_ {
 	}
 	
 	public void writeFile(String name) throws IOException {
-		int a = this.rows;
 		FileWriter fw=new FileWriter(name);
 		fw.write(this.rows + "\n");
 		fw.write(this.cols + "\n");
